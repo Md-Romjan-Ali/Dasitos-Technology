@@ -1,15 +1,16 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { Dropdown, Label } from "@heroui/react";
-import { FiChevronDown, FiBriefcase, FiUsers, FiCompass, FiMenu, FiX } from "react-icons/fi";
+import { FiChevronDown, FiMenu, FiX } from "react-icons/fi";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isVisible, setIsVisible] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
-
+    const pathName = usePathname()
     // Handle Navbar hide/show on window scroll
     useEffect(() => {
         const handleScroll = () => {
@@ -38,7 +39,7 @@ const Navbar = () => {
         },
         { label: "Recruitments", href: "/recruitement" },
         { label: "Our Strength", href: "/strength" },
-        { label: "Our Clients", href: "/client" },
+        { label: "Our Clients", href: "/clients" },
         { label: "Gallery", href: "/gallary" },
         { label: "Careers", href: "/career" },
         { label: "Contact Us", href: "/contuctus" },
@@ -60,9 +61,9 @@ const Navbar = () => {
                             <Image
                                 height={500}
                                 width={500}
-                                src="https://i.ibb.co.com/wF8qRDCh/Chat-GPT-Image-Jul-27-2026-10-23-48-PM.png"
+                                src="https://i.ibb.co.com/4nPLKbPJ/Gemini-Generated-Image-aszvqhaszvqhaszv.png"
                                 alt="AMAZE Logo"
-                                className="h-10 w-auto object-contain"
+                                className="h-13 w-16 rounded-2xl object-contain"
                             />
                         </Link>
                     </div>
@@ -106,7 +107,7 @@ const Navbar = () => {
                                 <li key={index}>
                                     <Link
                                         href={item.href}
-                                        className={`text-sm font-medium transition-colors ${item.active
+                                        className={`text-sm font-medium transition-colors ${item.href === pathName
                                             ? "text-blue-400 font-semibold"
                                             : "text-slate-200 hover:text-blue-400"
                                             }`}

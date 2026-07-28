@@ -25,7 +25,7 @@ const galleryItems = [
         id: 2,
         title: "Commercial Facility Cleaning",
         category: "Cleaner",
-        image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDq5W_u5BtDj0zud-4TxLhi2zLvsiUDNN-HlZuai1OY3mZlSI7Fv-Io5E&s=10",
     },
     {
         id: 3,
@@ -35,9 +35,9 @@ const galleryItems = [
     },
     {
         id: 4,
-        title: "Female Security Personnel Unit",
-        category: "Women Security",
-        image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
+        title: "Security Personnel Unit",
+        category: "Security",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdDhqh5nyfg9nB23_V9TUG450gWZMOxGW_Ew2apq1uqkLE6d6mRQOCAJo&s=10",
     },
     {
         id: 5,
@@ -61,7 +61,7 @@ const galleryItems = [
         id: 8,
         title: "Technical Engineering Specialists",
         category: "Engineer Group",
-        image: "https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80",
+        image: "https://img.magnific.com/free-photo/architect-man-showing-something-project-his-colleague-foreman_496169-959.jpg",
     },
 ];
 

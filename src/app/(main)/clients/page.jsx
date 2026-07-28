@@ -129,7 +129,7 @@ const ClientsSection = () => {
         : [];
 
     return (
-        <section className="relative bg-[#030712] text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <section className="relative mt-10 bg-[#030712] text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
             {/* Background Ambient Accents */}
             <div className="absolute top-1/4 -left-40 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
             <div className="absolute bottom-10 -right-40 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none" />
@@ -191,7 +191,7 @@ const ClientsSection = () => {
                         </h3>
 
                         {filteredClients.length > 0 ? (
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
                                 {filteredClients.map((client, idx) => (
                                     <motion.div
                                         key={idx}

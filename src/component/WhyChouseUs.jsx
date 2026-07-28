@@ -22,7 +22,7 @@ const steps = [
             "Immediate emergency backup staff deployment",
         ],
         images: {
-            main: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1000&auto=format&fit=crop",
+            main: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDq5W_u5BtDj0zud-4TxLhi2zLvsiUDNN-HlZuai1OY3mZlSI7Fv-Io5E&s=10",
             sub: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=600&auto=format&fit=crop",
             badge: "Inhouse Facilities",
         },
@@ -39,7 +39,7 @@ const steps = [
         ],
         images: {
             main: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1000&auto=format&fit=crop",
-            sub: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop",
+            sub: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdDhqh5nyfg9nB23_V9TUG450gWZMOxGW_Ew2apq1uqkLE6d6mRQOCAJo&s=10",
             badge: "Safety & SOPs",
         },
     },
@@ -126,23 +126,6 @@ const WhyChooseUsHero = () => {
                                         </li>
                                     ))}
                                 </ul>
-
-                                {/* Call CTA Button only on Step 3 */}
-                                {activeStep === 2 && (
-                                    <motion.div
-                                        initial={{ opacity: 0, scale: 0.95 }}
-                                        animate={{ opacity: 1, scale: 1 }}
-                                        className="pt-4"
-                                    >
-                                        <a
-                                            href="tel:9908538137"
-                                            className="inline-flex items-center gap-3 px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl shadow-lg shadow-blue-600/30 transition-all hover:scale-105"
-                                        >
-                                            <FiPhoneCall className="size-5" />
-                                            <span>Call 9908538137</span>
-                                        </a>
-                                    </motion.div>
-                                )}
                             </motion.div>
                         </AnimatePresence>
                     </div>

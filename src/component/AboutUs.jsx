@@ -86,8 +86,10 @@ const AboutUs = () => {
                         className="relative w-full max-w-[380px] h-[450px] rounded-3xl overflow-hidden border border-slate-800 bg-slate-900 shadow-2xl shadow-blue-950/20 group"
                     >
                         {/* Replace image path with your actual image path */}
-                        <img
-                            src="https://via.placeholder.com/400x500/1e3a8a/ffffff?text=ACTION+GROUP+ESTD+2001"
+                        <Image
+                            height={700}
+                            width={700}
+                            src="https://i.ibb.co.com/d44Y5j26/img11.png"
                             alt="Action Group Logo"
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                         />
@@ -107,7 +109,7 @@ const AboutUs = () => {
                             <Image
                                 height={500}
                                 width={500}
-                                src="https://via.placeholder.com/350x200/0f172a/ffffff?text=AMAZE+Team+Photo"
+                                src="https://i.ibb.co.com/sJMQdxJ3/about1.png"
                                 alt="AMAZE Team"
                                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                             />

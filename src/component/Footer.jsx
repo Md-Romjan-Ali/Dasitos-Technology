@@ -13,6 +13,7 @@ import {
     FiSend,
 } from "react-icons/fi";
 import Image from "next/image";
+import Link from "next/link";
 
 const footerLinks = {
     menu: [
@@ -100,13 +101,15 @@ const Footer = () => {
                     >
                         <div className="flex items-center gap-3">
                             {/* Replace with your image logo path if preferred */}
-                            <Image
-                                height={100}
-                                width={120}
-                                src="https://i.ibb.co.com/wF8qRDCh/Chat-GPT-Image-Jul-27-2026-10-23-48-PM.png"
-                                alt="AMAZE Logo"
-                                className="h-10 w-auto object-contain"
-                            />
+                            <Link href={'/'}>
+                                <Image
+                                    height={500}
+                                    width={500}
+                                    src="https://i.ibb.co.com/4nPLKbPJ/Gemini-Generated-Image-aszvqhaszvqhaszv.pnghttps://i.ibb.co.com/rRjsVxB7/Gemini-Generated-Image-aszvqhaszvqhaszv-removebg-preview.png"
+                                    alt="AMAZE Logo"
+                                    className="h-20 w-25 rounded-2xl object-contain"
+                                />
+                            </Link>
                         </div>
 
                         <h4 className="text-lg font-bold text-white tracking-tight">

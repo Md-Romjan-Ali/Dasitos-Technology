@@ -11,19 +11,19 @@ const clientLogos = [
     },
     {
         name: "DivyaSree",
-        logo: "https://via.placeholder.com/200x80/0f172a/60a5fa?text=DivyaSree",
+        logo: "https://www.amazepms.com/assets/client2.png",
     },
     {
         name: "L&T Technology Services",
-        logo: "https://via.placeholder.com/220x80/0f172a/38bdf8?text=L%26T+Technology+Services",
+        logo: "https://www.amazepms.com/assets/client8.png",
     },
     {
         name: "Hill County",
-        logo: "https://via.placeholder.com/200x80/0f172a/4ade80?text=HILL+COUNTY",
+        logo: "https://www.amazepms.com/assets/client4.png",
     },
     {
-        name: "Sri Sairam Towers",
-        logo: "https://via.placeholder.com/220x80/0f172a/38bdf8?text=SRI+SAIRAM+TOWERS",
+        name: "LODHA",
+        logo: "https://www.amazepms.com/assets/client6.png",
     },
 ];
 
