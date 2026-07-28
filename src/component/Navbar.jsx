@@ -55,16 +55,16 @@ const Navbar = () => {
 
                     {/* Logo / Brand */}
                     <div className="flex-shrink-0">
-                        <a href="#" className="flex items-center">
+                        <Link href="/" className="flex items-center">
                             {/* Replace src with your image path */}
                             <Image
-                                height={100}
-                                width={100}
+                                height={500}
+                                width={500}
                                 src="https://i.ibb.co.com/wF8qRDCh/Chat-GPT-Image-Jul-27-2026-10-23-48-PM.png"
                                 alt="AMAZE Logo"
                                 className="h-10 w-auto object-contain"
                             />
-                        </a>
+                        </Link>
                     </div>
 
                     {/* Desktop Navigation Links */}
