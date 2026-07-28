@@ -1,15 +1,17 @@
 import AboutUs from "@/component/AboutUs";
 import Hero from "@/component/HeroSection";
-import Navbar from "@/component/Navbar";
 import Sponsore from "@/component/Sponsore";
+import WhyChooseUs from "@/component/WhyChouseUs";
 
 export default function Home() {
   return (
     <div className="">
-      <Navbar />
+
       <Hero />
       <Sponsore />
       <AboutUs />
+      <WhyChooseUs />
+
     </div>
   );
 }

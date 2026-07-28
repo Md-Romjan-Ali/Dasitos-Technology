@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Dropdown, Label } from "@heroui/react";
 import { FiChevronDown, FiBriefcase, FiUsers, FiCompass, FiMenu, FiX } from "react-icons/fi";
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -29,22 +30,18 @@ const Navbar = () => {
     }, [lastScrollY]);
 
     const navLinks = [
-        { label: "Home", href: "#", active: true },
-        { label: "About Us", href: "#" },
+        { label: "Home", href: "/", active: true },
+        { label: "About Us", href: "/aboutCompany" },
         {
-            label: "Services",
-            dropdown: [
-                { label: "Consulting", icon: <FiCompass className="text-blue-400" /> },
-                { label: "Staffing Solutions", icon: <FiUsers className="text-blue-400" /> },
-                { label: "Project Management", icon: <FiBriefcase className="text-blue-400" /> },
-            ],
+            label: "Services", href: "/service"
+
         },
-        { label: "Recruitments", href: "#" },
-        { label: "Our Strength", href: "#" },
-        { label: "Our Clients", href: "#" },
-        { label: "Gallery", href: "#" },
-        { label: "Careers", href: "#" },
-        { label: "Contact Us", href: "#" },
+        { label: "Recruitments", href: "/recruitement" },
+        { label: "Our Strength", href: "/strength" },
+        { label: "Our Clients", href: "/client" },
+        { label: "Gallery", href: "/gallary" },
+        { label: "Careers", href: "/career" },
+        { label: "Contact Us", href: "/contuctus" },
     ];
 
     return (
@@ -107,15 +104,15 @@ const Navbar = () => {
 
                             return (
                                 <li key={index}>
-                                    <a
-                                        href={item.href || "#"}
+                                    <Link
+                                        href={item.href}
                                         className={`text-sm font-medium transition-colors ${item.active
                                             ? "text-blue-400 font-semibold"
                                             : "text-slate-200 hover:text-blue-400"
                                             }`}
                                     >
                                         {item.label}
-                                    </a>
+                                    </Link>
                                 </li>
                             );
                         })}
