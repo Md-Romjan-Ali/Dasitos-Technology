@@ -4,7 +4,6 @@ import React, { useRef, useState } from "react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import {
     FiCheckCircle,
-    FiPhoneCall,
     FiArrowDown,
 } from "react-icons/fi";
 import Image from "next/image";
@@ -22,7 +21,7 @@ const steps = [
             "Immediate emergency backup staff deployment",
         ],
         images: {
-            main: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDq5W_u5BtDj0zud-4TxLhi2zLvsiUDNN-HlZuai1OY3mZlSI7Fv-Io5E&s=10",
+            main: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000&auto=format&fit=crop",
             sub: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=600&auto=format&fit=crop",
             badge: "Inhouse Facilities",
         },
@@ -39,7 +38,7 @@ const steps = [
         ],
         images: {
             main: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1000&auto=format&fit=crop",
-            sub: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdDhqh5nyfg9nB23_V9TUG450gWZMOxGW_Ew2apq1uqkLE6d6mRQOCAJo&s=10",
+            sub: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop",
             badge: "Safety & SOPs",
         },
     },
@@ -85,13 +84,13 @@ const WhyChooseUsHero = () => {
     const currentData = steps[activeStep];
 
     return (
-        <div ref={targetRef} className="relative h-[300vh] bg-[#030712] text-white">
+        <div ref={targetRef} className="relative h-[300vh] bg-slate-50 dark:bg-[#030712] text-slate-900 dark:text-white transition-colors duration-300">
             {/* Pinned Sticky Hero Screen */}
             <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8">
 
                 {/* Background Ambient Glows */}
-                <div className="absolute -top-40 -left-40 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
-                <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none" />
+                <div className="absolute -top-40 -left-40 w-96 h-96 bg-blue-500/10 dark:bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
+                <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-indigo-500/10 dark:bg-indigo-600/10 rounded-full blur-3xl pointer-events-none" />
 
                 <div className="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
 
@@ -106,22 +105,22 @@ const WhyChooseUsHero = () => {
                                 transition={{ duration: 0.35, ease: "easeInOut" }}
                                 className="space-y-4"
                             >
-                                <span className="text-blue-400 text-xs sm:text-sm font-semibold tracking-wider uppercase bg-blue-500/10 px-3.5 py-1.5 rounded-full border border-blue-500/20">
+                                <span className="text-blue-600 dark:text-blue-400 text-xs sm:text-sm font-semibold tracking-wider uppercase bg-blue-50 dark:bg-blue-500/10 px-3.5 py-1.5 rounded-full border border-blue-200 dark:border-blue-500/25 inline-block">
                                     {currentData.tag}
                                 </span>
 
-                                <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+                                <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-gray-500 leading-tight">
                                     {currentData.title}
                                 </h2>
 
-                                <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
+                                <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed">
                                     {currentData.description}
                                 </p>
 
-                                <ul className="space-y-2 pt-2">
+                                <ul className="space-y-2.5 pt-2">
                                     {currentData.points.map((pt, i) => (
-                                        <li key={i} className="flex items-center gap-2.5 text-sm text-slate-300">
-                                            <FiCheckCircle className="text-blue-400 shrink-0" />
+                                        <li key={i} className="flex items-center gap-2.5 text-sm text-slate-700 dark:text-slate-300 font-medium">
+                                            <FiCheckCircle className="text-blue-600 dark:text-blue-400 shrink-0 size-4" />
                                             <span>{pt}</span>
                                         </li>
                                     ))}
@@ -132,7 +131,7 @@ const WhyChooseUsHero = () => {
 
                     {/* RIGHT COLUMN: Image Container */}
                     <div className="lg:col-span-6 relative h-[380px] sm:h-[460px] w-full">
-                        <div className="relative w-full h-full rounded-3xl overflow-hidden border border-slate-800 bg-slate-900/40 p-4 shadow-2xl backdrop-blur-xl">
+                        <div className="relative w-full h-full rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/40 p-4 shadow-xl dark:shadow-2xl backdrop-blur-xl">
                             <AnimatePresence mode="wait">
                                 <motion.div
                                     key={activeStep}
@@ -143,21 +142,21 @@ const WhyChooseUsHero = () => {
                                     className="relative w-full h-full"
                                 >
                                     {/* Main Image */}
-                                    <div className="absolute inset-x-0 top-0 h-[70%] rounded-2xl overflow-hidden border border-slate-700/50 shadow-md">
+                                    <div className="absolute inset-x-0 top-0 h-[70%] rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/50 shadow-md">
                                         <Image
                                             src={currentData.images.main}
                                             alt={currentData.title}
                                             fill
                                             className="object-cover"
                                         />
-                                        <span className="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-md text-blue-400 text-xs px-3 py-1 rounded-full border border-slate-800">
+                                        <span className="absolute top-3 left-3 bg-white/90 dark:bg-slate-950/80 backdrop-blur-md text-blue-600 dark:text-blue-400 text-xs font-semibold px-3 py-1 rounded-full border border-slate-200 dark:border-slate-800 shadow-sm">
                                             {currentData.images.badge}
                                         </span>
                                     </div>
 
                                     {/* Secondary/Sub Image */}
                                     <div
-                                        className={`absolute bottom-2 w-[55%] h-[50%] rounded-2xl overflow-hidden border-4 border-[#030712] shadow-2xl ${activeStep === 1 ? "left-2" : "right-2"
+                                        className={`absolute bottom-2 w-[55%] h-[50%] rounded-2xl overflow-hidden border-4 border-white dark:border-[#030712] shadow-2xl ${activeStep === 1 ? "left-2" : "right-2"
                                             }`}
                                     >
                                         <Image
@@ -174,10 +173,10 @@ const WhyChooseUsHero = () => {
 
                 </div>
 
-                {/* Scroll Down Indicator */}
-                <div className="fixed bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-slate-400 text-xs font-medium animate-bounce">
+                {/* Scroll Down Indicator (Absolute to sticky view instead of fixed) */}
+                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-slate-500 dark:text-slate-400 text-xs font-medium animate-bounce pointer-events-none">
                     <span>Scroll down to explore</span>
-                    <FiArrowDown className="text-blue-400 size-4" />
+                    <FiArrowDown className="text-blue-600 dark:text-blue-400 size-4" />
                 </div>
 
             </div>
