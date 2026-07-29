@@ -13,7 +13,7 @@ const AboutUs = () => {
     ];
 
     return (
-        <section className="relative w-full bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 py-20 px-6 sm:px-12 lg:px-20 overflow-hidden border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
+        <div className="relative w-full bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 py-20 px-6 sm:px-12 lg:px-20 overflow-hidden border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
             {/* Background Decorative Glow Effect */}
             <div
                 className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-500/10 dark:bg-blue-600/15 rounded-full blur-[120px] pointer-events-none"
@@ -121,7 +121,7 @@ const AboutUs = () => {
                 </div>
 
             </div>
-        </section>
+        </div>
     );
 };
 

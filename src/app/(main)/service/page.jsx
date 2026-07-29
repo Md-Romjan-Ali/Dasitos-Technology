@@ -31,7 +31,7 @@ const servicesData = [
         title: "House Keeping Services",
         icon: FiHome,
         tag: "Facility Care",
-        image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=800&auto=format&fit=crop",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDq5W_u5BtDj0zud-4TxLhi2zLvsiUDNN-HlZuai1OY3mZlSI7Fv-Io5E&s=10",
         description: "Daily hygiene upkeep, deep cleaning, and systematic maintenance of residential and commercial premises.",
     },
     {

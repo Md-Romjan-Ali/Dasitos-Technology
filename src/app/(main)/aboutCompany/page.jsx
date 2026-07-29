@@ -57,7 +57,7 @@ const segments = [
 
 const CompanyProfile = () => {
     return (
-        <section className="relative bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-300">
+        <div className="relative bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-300">
             {/* Background Glowing Ambient Accents */}
             <div
                 className="absolute top-1/4 -left-40 w-96 h-96 bg-blue-500/5 dark:bg-blue-600/10 rounded-full blur-3xl pointer-events-none"
@@ -171,7 +171,7 @@ const CompanyProfile = () => {
                 </div>
 
             </div>
-        </section>
+        </div>
     );
 };
 
