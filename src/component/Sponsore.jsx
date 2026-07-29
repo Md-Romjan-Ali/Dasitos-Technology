@@ -34,14 +34,14 @@ const Sponsore = () => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
-        <section className="w-full bg-[#030712] py-16 px-4 overflow-hidden border-y border-slate-800/80">
+        <section className="w-full bg-slate-50 dark:bg-[#030712] py-16 px-4 overflow-hidden border-y border-slate-200 dark:border-slate-800/80 transition-colors duration-300">
             {/* Header Badge */}
             <div className="max-w-7xl mx-auto mb-10 text-center">
                 <motion.span
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="inline-block px-4 py-1.5 rounded-full bg-blue-950/60 border border-blue-500/30 text-blue-400 text-xs font-semibold uppercase tracking-widest shadow-lg shadow-blue-500/10"
+                    className="inline-block px-4 py-1.5 rounded-full bg-blue-100/80 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-500/30 text-blue-700 dark:text-blue-400 text-xs font-semibold uppercase tracking-widest shadow-sm dark:shadow-lg dark:shadow-blue-500/10"
                 >
                     Trusted by Industry Leaders
                 </motion.span>
@@ -69,7 +69,7 @@ const Sponsore = () => {
                             key={index}
                             whileHover={{ scale: 1.08, y: -6 }}
                             transition={{ type: "spring", stiffness: 400, damping: 25 }}
-                            className="flex items-center justify-center h-24 px-8 bg-slate-900/70 backdrop-blur-md border border-slate-800/80 hover:border-blue-500/60 rounded-2xl shadow-xl shadow-black/50 hover:shadow-blue-500/10 transition-colors duration-300 group cursor-pointer"
+                            className="flex items-center justify-center h-24 px-8 bg-white/80 dark:bg-slate-900/70 backdrop-blur-md border border-slate-200 dark:border-slate-800/80 hover:border-blue-500/50 dark:hover:border-blue-500/60 rounded-2xl shadow-sm hover:shadow-xl dark:shadow-xl dark:shadow-black/50 hover:shadow-blue-500/10 transition-all duration-300 group cursor-pointer"
                         >
                             <Image
                                 height={200}
@@ -77,7 +77,7 @@ const Sponsore = () => {
                                 src={client.logo}
                                 alt={client.name}
                                 title={client.name}
-                                className="h-10 sm:h-12 w-auto object-contain max-w-[180px] filter brightness-90 group-hover:brightness-110 transition-all duration-300"
+                                className="h-10 sm:h-12 w-auto object-contain max-w-[180px] filter brightness-95 dark:brightness-90 group-hover:brightness-110 transition-all duration-300"
                             />
                         </motion.div>
                     ))}

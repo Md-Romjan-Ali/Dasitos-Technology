@@ -20,19 +20,18 @@ const strengthsList = [
 
 const StrengthsSection = () => {
     return (
-        <section className="relative bg-[#030712] text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <section className="relative mt-10 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-300">
             {/* Background Ambient Accents */}
-            <div className="absolute top-1/3 -left-40 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute bottom-10 -right-40 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute top-1/3 -left-40 w-96 h-96 bg-blue-500/10 dark:bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute bottom-10 -right-40 w-96 h-96 bg-indigo-500/10 dark:bg-indigo-600/10 rounded-full blur-3xl pointer-events-none" />
 
             <div className="max-w-7xl mx-auto relative z-10">
-
                 {/* HEADER */}
                 <div className="space-y-2 mb-10 text-center sm:text-left">
-                    <span className="text-blue-400 text-xs sm:text-sm font-semibold tracking-wider uppercase bg-blue-500/10 px-3.5 py-1.5 rounded-full border border-blue-500/20 inline-block">
+                    <span className="text-blue-600 dark:text-blue-400 text-xs sm:text-sm font-semibold tracking-wider uppercase bg-blue-500/10 px-3.5 py-1.5 rounded-full border border-blue-500/20 inline-block">
                         Strength
                     </span>
-                    <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
+                    <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white">
                         Our Strength
                     </h2>
                 </div>
@@ -52,18 +51,17 @@ const StrengthsSection = () => {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.2, delay: idx * 0.03 }}
                                 whileHover={{ scale: 1.01, x: 2 }}
-                                className={`group flex items-start gap-4 p-4 rounded-2xl bg-slate-900/40 border border-slate-800/80 hover:border-blue-500/40 hover:bg-slate-900/70 transition-all cursor-default ${isLastOddItem ? "md:col-span-2" : ""
+                                className={`group flex items-start gap-4 p-4.5 sm:p-5 rounded-2xl bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/80 hover:border-blue-500/50 dark:hover:border-blue-500/40 hover:bg-slate-100/60 dark:hover:bg-slate-900/70 shadow-sm dark:shadow-none transition-all cursor-default ${isLastOddItem ? "md:col-span-2" : ""
                                     }`}
                             >
-                                <FiCheckCircle className="text-blue-400 group-hover:text-blue-300 group-hover:scale-110 transition-transform shrink-0 size-5 mt-0.5" />
-                                <p className="text-slate-300 group-hover:text-white text-sm sm:text-base leading-relaxed font-normal transition-colors">
+                                <FiCheckCircle className="text-blue-600 dark:text-blue-400 group-hover:text-blue-500 dark:group-hover:text-blue-300 group-hover:scale-110 transition-transform shrink-0 size-5 mt-0.5" />
+                                <p className="text-slate-700 dark:text-slate-300 group-hover:text-slate-900 dark:group-hover:text-white text-sm sm:text-base leading-relaxed font-normal transition-colors">
                                     {item}
                                 </p>
                             </motion.div>
                         );
                     })}
                 </div>
-
             </div>
         </section>
     );

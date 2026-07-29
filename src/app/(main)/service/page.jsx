@@ -19,7 +19,6 @@ import {
     FiArrowUpRight,
 } from "react-icons/fi";
 
-// All 19 Services with targeted Unsplash Images
 const servicesData = [
     {
         title: "Security Services",
@@ -32,7 +31,7 @@ const servicesData = [
         title: "House Keeping Services",
         icon: FiHome,
         tag: "Facility Care",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDq5W_u5BtDj0zud-4TxLhi2zLvsiUDNN-HlZuai1OY3mZlSI7Fv-Io5E&s=10",
+        image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=800&auto=format&fit=crop",
         description: "Daily hygiene upkeep, deep cleaning, and systematic maintenance of residential and commercial premises.",
     },
     {
@@ -156,19 +155,16 @@ const servicesData = [
     },
 ];
 
-// Service Partners Data
 const partners = [
     {
         name: "Amaze Property Management Solutions Pvt Ltd",
         specialty: "MEP Services",
         services: ["PMS Services", "Housekeeping", "MEP", "Gardening", "Pest Control Services"],
-        logoBg: "from-blue-600/20 to-indigo-600/20",
     },
     {
         name: "Action & Protection Security Force",
         specialty: "Security Services",
         services: ["Security Services", "Fire Training", "Escort Services", "Event Security", "Help Desk Services"],
-        logoBg: "from-indigo-600/20 to-blue-600/20",
     },
     {
         name: "Action Facility Services Pvt Ltd",
@@ -180,42 +176,41 @@ const partners = [
             "Project Cleaning",
             "Sofa & Carpet Cleaning Services",
         ],
-        logoBg: "from-blue-500/20 to-cyan-500/20",
     },
 ];
 
 const ServicesPage = () => {
     return (
-        <div className="bg-[#030712] text-white min-h-screen py-20 mt-10 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div className="bg-slate-50 dark:bg-[#030712] text-slate-900 dark:text-white min-h-screen py-20 mt-10 px-4 sm:px-6 lg:px-8 relative overflow-hidden transition-colors duration-300">
 
-            {/* Background Ambient Lights */}
-            <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
-            <div className="absolute bottom-20 -left-40 w-96 h-96 bg-indigo-600/10 blur-[120px] rounded-full pointer-events-none" />
+            {/* Ambient Lights */}
+            <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-400/20 dark:bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
+            <div className="absolute bottom-20 -left-40 w-96 h-96 bg-indigo-400/20 dark:bg-indigo-600/10 blur-[120px] rounded-full pointer-events-none" />
 
             <div className="max-w-7xl mx-auto space-y-24 relative z-10">
 
                 {/* HERO SECTION */}
                 <div className="text-center max-w-3xl mx-auto space-y-4">
-                    <span className="text-blue-400 text-xs sm:text-sm font-semibold tracking-wider uppercase bg-blue-500/10 px-3.5 py-1.5 rounded-full border border-blue-500/20">
+                    <span className="text-blue-600 dark:text-blue-400 text-xs sm:text-sm font-semibold tracking-wider uppercase bg-blue-100 dark:bg-blue-500/10 px-3.5 py-1.5 rounded-full border border-blue-200 dark:border-blue-500/20">
                         Property & Asset Management
                     </span>
-                    <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                    <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-600 leading-tight">
                         End-to-End Operational Solutions
                     </h1>
-                    <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
+                    <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg leading-relaxed">
                         From technical MEP systems and round-the-clock security to complete domestic care and strategic asset monetization.
                     </p>
                 </div>
 
-                {/* SERVICES GRID (From Security Services to New Revenue Opportunities) */}
+                {/* SERVICES GRID */}
                 <div>
                     <div className="flex items-center justify-between mb-10">
                         <div>
-                            <h2 className="text-2xl sm:text-3xl font-bold">Our Specialized Services</h2>
-                            <p className="text-slate-400 text-sm mt-1">Explore our broad spectrum of property solutions</p>
+                            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">Our Specialized Services</h2>
+                            <p className="text-slate-500 dark:text-slate-400 text-sm mt-1">Explore our broad spectrum of property solutions</p>
                         </div>
-                        <span className="hidden sm:inline-block text-xs font-semibold text-blue-400 bg-blue-500/10 border border-blue-500/20 px-3 py-1.5 rounded-full">
-                            19 Services Available
+                        <span className="hidden sm:inline-block text-xs font-semibold text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/20 px-3 py-1.5 rounded-full">
+                            {servicesData.length} Services Available
                         </span>
                     </div>
 
@@ -224,31 +219,32 @@ const ServicesPage = () => {
                             const Icon = service.icon;
                             return (
                                 <motion.div
-                                    key={index}
+                                    key={service.title}
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.4, delay: (index % 3) * 0.1 }}
                                     whileHover={{ y: -8 }}
-                                    className="group relative rounded-3xl border border-slate-800 bg-slate-900/40 overflow-hidden shadow-2xl backdrop-blur-xl transition-all duration-300 hover:border-blue-500/50 hover:bg-slate-900/70 hover:shadow-blue-500/10 flex flex-col justify-between"
+                                    className="group relative rounded-3xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/40 overflow-hidden shadow-xl dark:shadow-2xl backdrop-blur-xl transition-all duration-300 hover:border-blue-500/50 hover:shadow-blue-500/10 flex flex-col justify-between"
                                 >
                                     {/* Card Image Header */}
-                                    <div className="relative h-48 w-full overflow-hidden bg-slate-800">
+                                    <div className="relative h-48 w-full overflow-hidden bg-slate-200 dark:bg-slate-800">
                                         <Image
                                             src={service.image}
                                             alt={service.title}
                                             fill
+                                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                             className="object-cover transition-transform duration-500 group-hover:scale-110"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent dark:from-slate-950 dark:via-slate-950/40 dark:to-transparent" />
 
                                         {/* Top Badge */}
-                                        <span className="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-md text-blue-400 text-xs font-medium px-3 py-1 rounded-full border border-slate-800">
+                                        <span className="absolute top-3 left-3 bg-white/90 dark:bg-slate-950/80 backdrop-blur-md text-blue-600 dark:text-blue-400 text-xs font-medium px-3 py-1 rounded-full border border-slate-200 dark:border-slate-800 shadow-sm">
                                             {service.tag}
                                         </span>
 
-                                        {/* Service Icon floating */}
-                                        <div className="absolute bottom-3 right-3 p-2.5 rounded-xl bg-blue-600/90 text-white backdrop-blur-md shadow-lg group-hover:bg-blue-500 transition-colors">
+                                        {/* Floating Service Icon */}
+                                        <div className="absolute bottom-3 right-3 p-2.5 rounded-xl bg-blue-600 text-white backdrop-blur-md shadow-lg group-hover:bg-blue-500 transition-colors">
                                             <Icon className="size-5" />
                                         </div>
                                     </div>
@@ -256,16 +252,16 @@ const ServicesPage = () => {
                                     {/* Card Content Body */}
                                     <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
                                         <div className="space-y-2">
-                                            <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors flex items-center justify-between">
+                                            <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors flex items-center justify-between">
                                                 <span>{service.title}</span>
-                                                <FiArrowUpRight className="size-4 opacity-0 group-hover:opacity-100 transition-opacity text-blue-400" />
+                                                <FiArrowUpRight className="size-4 opacity-0 group-hover:opacity-100 transition-opacity text-blue-600 dark:text-blue-400" />
                                             </h3>
-                                            <p className="text-slate-400 text-sm leading-relaxed">
+                                            <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
                                                 {service.description}
                                             </p>
                                         </div>
 
-                                        <div className="pt-4 border-t border-slate-800/80 flex items-center gap-2 text-xs font-semibold text-slate-400 group-hover:text-blue-400 transition-colors">
+                                        <div className="pt-4 border-t border-slate-200 dark:border-slate-800/80 flex items-center gap-2 text-xs font-semibold text-slate-500 dark:text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                             <span className="size-1.5 rounded-full bg-blue-500" />
                                             <span>Professional Delivery</span>
                                         </div>
@@ -276,16 +272,16 @@ const ServicesPage = () => {
                     </div>
                 </div>
 
-                {/* OUR SERVICE PARTNERS SECTION */}
+                {/* SERVICE PARTNERS SECTION */}
                 <div className="pt-12">
                     <div className="text-center max-w-2xl mx-auto space-y-3 mb-14">
-                        <span className="text-blue-400 text-xs sm:text-sm font-semibold tracking-wider uppercase bg-blue-500/10 px-3.5 py-1.5 rounded-full border border-blue-500/20">
+                        <span className="text-blue-600 dark:text-blue-400 text-xs sm:text-sm font-semibold tracking-wider uppercase bg-blue-100 dark:bg-blue-500/10 px-3.5 py-1.5 rounded-full border border-blue-200 dark:border-blue-500/20">
                             Trusted Network
                         </span>
-                        <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
+                        <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
                             Our Service Partners
                         </h2>
-                        <p className="text-slate-400 text-sm sm:text-base">
+                        <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base">
                             Collaborating with certified industry partners to deliver specialized expertise.
                         </p>
                     </div>
@@ -293,50 +289,46 @@ const ServicesPage = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {partners.map((partner, index) => (
                             <motion.div
-                                key={index}
+                                key={partner.name}
                                 initial={{ opacity: 0, scale: 0.95 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.4, delay: index * 0.15 }}
                                 whileHover={{ y: -6 }}
-                                className="rounded-3xl border border-slate-800 bg-slate-900/40 p-8 shadow-2xl backdrop-blur-xl relative flex flex-col justify-between hover:border-blue-500/40 transition-all duration-300"
+                                className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/40 p-8 shadow-xl dark:shadow-2xl backdrop-blur-xl relative flex flex-col justify-between hover:border-blue-500/40 transition-all duration-300"
                             >
                                 <div className="space-y-6">
-                                    {/* Specialty Header */}
                                     <div className="flex items-center justify-between">
-                                        <span className="text-xs font-bold text-blue-400 uppercase tracking-widest bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">
+                                        <span className="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest bg-blue-100 dark:bg-blue-500/10 px-3 py-1 rounded-full border border-blue-200 dark:border-blue-500/20">
                                             {partner.specialty}
                                         </span>
                                     </div>
 
-                                    {/* Partner Title */}
-                                    <h3 className="text-xl font-bold text-white leading-snug">
+                                    <h3 className="text-xl font-bold text-slate-900 dark:text-white leading-snug">
                                         {partner.name}
                                     </h3>
 
-                                    {/* Offered Services List */}
                                     <div className="space-y-2.5 pt-2">
-                                        <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-2">
+                                        <span className="text-xs font-semibold text-slate-400 dark:text-slate-400 uppercase tracking-wider block mb-2">
                                             Core Offerings:
                                         </span>
-                                        {partner.services.map((srv, idx) => (
-                                            <div key={idx} className="flex items-center gap-2.5 text-sm text-slate-300">
-                                                <FiCheckCircle className="text-blue-400 shrink-0 size-4" />
+                                        {partner.services.map((srv) => (
+                                            <div key={srv} className="flex items-center gap-2.5 text-sm text-slate-700 dark:text-slate-300">
+                                                <FiCheckCircle className="text-blue-600 dark:text-blue-400 shrink-0 size-4" />
                                                 <span>{srv}</span>
                                             </div>
                                         ))}
                                     </div>
                                 </div>
 
-                                <div className="mt-8 pt-4 border-t border-slate-800 text-xs text-slate-500 flex items-center justify-between">
+                                <div className="mt-8 pt-4 border-t border-slate-200 dark:border-slate-800 text-xs text-slate-500 dark:text-slate-500 flex items-center justify-between">
                                     <span>Certified Execution</span>
-                                    <span className="text-blue-400 font-semibold">Verified Partner</span>
+                                    <span className="text-blue-600 dark:text-blue-400 font-semibold">Verified Partner</span>
                                 </div>
                             </motion.div>
                         ))}
                     </div>
                 </div>
-
             </div>
         </div>
     );

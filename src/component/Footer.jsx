@@ -7,27 +7,25 @@ import {
     FiMail,
     FiMapPin,
     FiChevronRight,
-    FiCompass,
     FiGlobe,
     FiArrowUpRight,
-    FiSend,
 } from "react-icons/fi";
 import Image from "next/image";
 import Link from "next/link";
 
 const footerLinks = {
     menu: [
-        { label: "Home", href: "#" },
-        { label: "About Us", href: "#" },
-        { label: "Services", href: "#" },
-        { label: "Our Strength", href: "#" },
-        { label: "Gallery", href: "#" },
+        { label: "Home", href: "/" },
+        { label: "About Us", href: "/aboutCompany" },
+        { label: "Services", href: "/service" },
+        { label: "Our Strength", href: "/strength" },
+        { label: "Gallery", href: "/gallery" },
     ],
     quickLinks: [
-        { label: "Our Clients", href: "#" },
-        { label: "Recruitments", href: "#" },
-        { label: "Careers", href: "#" },
-        { label: "Contact Us", href: "#" },
+        { label: "Our Clients", href: "/clients" },
+        { label: "Recruitments", href: "/recruitement" },
+        { label: "Careers", href: "/career" },
+        { label: "Contact Us", href: "/contact-us" },
     ],
     presence: [
         "Telangana",
@@ -40,10 +38,10 @@ const footerLinks = {
 
 const Footer = () => {
     return (
-        <footer className="relative bg-[#030712] text-slate-300 pt-16 pb-8 overflow-hidden border-t border-slate-800/80">
+        <footer className="relative bg-slate-50 dark:bg-[#030712] text-slate-600 dark:text-slate-300 pt-16 pb-8 overflow-hidden border-t border-slate-200 dark:border-slate-800/80 transition-colors duration-300">
             {/* Background Ambient Glows */}
-            <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 dark:bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500/10 dark:bg-indigo-600/10 rounded-full blur-3xl pointer-events-none" />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 {/* TOP CTA CALLOUT CARD */}
@@ -52,17 +50,17 @@ const Footer = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="mb-16 p-6 sm:p-8 rounded-3xl bg-slate-900/60 backdrop-blur-xl border border-slate-800 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 hover:border-blue-500/30 transition-all duration-300"
+                    className="mb-16 p-6 sm:p-8 rounded-3xl bg-white/80 dark:bg-slate-900/60 backdrop-blur-xl border border-slate-200 dark:border-slate-800 shadow-xl dark:shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 hover:border-blue-500/30 transition-all duration-300"
                 >
                     <div className="flex items-center gap-4">
-                        <div className="p-4 rounded-2xl bg-blue-500/10 text-blue-400 border border-blue-500/20 shrink-0">
+                        <div className="p-4 rounded-2xl bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 shrink-0">
                             <FiPhone className="size-8 animate-pulse" />
                         </div>
                         <div>
-                            <span className="text-xs font-semibold text-blue-400 uppercase tracking-widest">
+                            <span className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-widest">
                                 Call Us For Our Services
                             </span>
-                            <h3 className="text-xl sm:text-2xl font-bold text-white mt-0.5">
+                            <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mt-0.5">
                                 Need immediate assistance or operational info?
                             </h3>
                         </div>
@@ -81,7 +79,7 @@ const Footer = () => {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             href="tel:9100694137"
-                            className="flex-1 md:flex-initial flex items-center justify-center gap-2 px-6 py-3.5 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-bold rounded-xl transition-all text-sm sm:text-base"
+                            className="flex-1 md:flex-initial flex items-center justify-center gap-2 px-6 py-3.5 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-slate-700 font-bold rounded-xl transition-all text-sm sm:text-base"
                         >
                             <FiPhone /> Call 9100694137
                         </motion.a>
@@ -100,30 +98,29 @@ const Footer = () => {
                         className="lg:col-span-4 space-y-5"
                     >
                         <div className="flex items-center gap-3">
-                            {/* Replace with your image logo path if preferred */}
-                            <Link href={'/'}>
+                            <Link href="/" className="flex items-center">
                                 <Image
                                     height={500}
                                     width={500}
-                                    src="https://i.ibb.co.com/4nPLKbPJ/Gemini-Generated-Image-aszvqhaszvqhaszv.pnghttps://i.ibb.co.com/rRjsVxB7/Gemini-Generated-Image-aszvqhaszvqhaszv-removebg-preview.png"
+                                    src="https://i.ibb.co.com/4nPLKbPJ/Gemini-Generated-Image-aszvqhaszvqhaszv.png"
                                     alt="AMAZE Logo"
-                                    className="h-20 w-25 rounded-2xl object-contain"
+                                    className="h-15 w-20 rounded-2xl object-contain"
                                 />
                             </Link>
                         </div>
 
-                        <h4 className="text-lg font-bold text-white tracking-tight">
+                        <h4 className="text-lg font-bold text-slate-900 dark:text-white tracking-tight">
                             Amaze Property Management Solutions Pvt Ltd
                         </h4>
 
-                        <p className="text-sm text-slate-400 leading-relaxed pr-4">
+                        <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed pr-4">
                             Delivering integrated, high-caliber property management, facility operations, compliance, and soft services across South India.
                         </p>
 
                         <div className="pt-2">
                             <a
                                 href="mailto:Info@amazepms.com"
-                                className="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 font-medium transition-colors"
+                                className="inline-flex items-center gap-2 text-sm text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 font-medium transition-colors"
                             >
                                 <FiMail /> Info@amazepms.com <FiArrowUpRight />
                             </a>
@@ -138,19 +135,19 @@ const Footer = () => {
                         transition={{ duration: 0.5, delay: 0.2 }}
                         className="lg:col-span-2 space-y-4"
                     >
-                        <h4 className="text-sm font-bold text-white uppercase tracking-wider border-l-2 border-blue-500 pl-2.5">
+                        <h4 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider border-l-2 border-blue-500 pl-2.5">
                             Menu
                         </h4>
                         <ul className="space-y-2.5 text-sm">
                             {footerLinks.menu.map((link, idx) => (
                                 <li key={idx}>
-                                    <a
+                                    <Link
                                         href={link.href}
-                                        className="flex items-center gap-1.5 text-slate-400 hover:text-blue-400 hover:translate-x-1 transition-all"
+                                        className="flex items-center gap-1.5 text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:translate-x-1 transition-all"
                                     >
                                         <FiChevronRight className="text-blue-500 size-3.5" />
                                         {link.label}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
@@ -164,19 +161,19 @@ const Footer = () => {
                         transition={{ duration: 0.5, delay: 0.3 }}
                         className="lg:col-span-2 space-y-4"
                     >
-                        <h4 className="text-sm font-bold text-white uppercase tracking-wider border-l-2 border-blue-500 pl-2.5">
+                        <h4 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider border-l-2 border-blue-500 pl-2.5">
                             Quick Links
                         </h4>
                         <ul className="space-y-2.5 text-sm">
                             {footerLinks.quickLinks.map((link, idx) => (
                                 <li key={idx}>
-                                    <a
+                                    <Link
                                         href={link.href}
-                                        className="flex items-center gap-1.5 text-slate-400 hover:text-blue-400 hover:translate-x-1 transition-all"
+                                        className="flex items-center gap-1.5 text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:translate-x-1 transition-all"
                                     >
                                         <FiChevronRight className="text-blue-500 size-3.5" />
                                         {link.label}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
@@ -190,13 +187,13 @@ const Footer = () => {
                         transition={{ duration: 0.5, delay: 0.4 }}
                         className="lg:col-span-2 space-y-4"
                     >
-                        <h4 className="text-sm font-bold text-white uppercase tracking-wider border-l-2 border-blue-500 pl-2.5 flex items-center gap-1.5">
-                            <FiGlobe className="text-blue-400" /> Presence
+                        <h4 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider border-l-2 border-blue-500 pl-2.5 flex items-center gap-1.5">
+                            <FiGlobe className="text-blue-500 dark:text-blue-400" /> Presence
                         </h4>
-                        <ul className="space-y-2 text-sm text-slate-400">
+                        <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
                             {footerLinks.presence.map((state, idx) => (
                                 <li key={idx} className="flex items-center gap-2">
-                                    <span className="h-1.5 w-1.5 rounded-full bg-blue-400" />
+                                    <span className="h-1.5 w-1.5 rounded-full bg-blue-500 dark:bg-blue-400" />
                                     {state}
                                 </li>
                             ))}
@@ -211,27 +208,27 @@ const Footer = () => {
                         transition={{ duration: 0.5, delay: 0.5 }}
                         className="lg:col-span-2 space-y-4"
                     >
-                        <h4 className="text-sm font-bold text-white uppercase tracking-wider border-l-2 border-blue-500 pl-2.5">
+                        <h4 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider border-l-2 border-blue-500 pl-2.5">
                             Contact
                         </h4>
-                        <div className="space-y-3 text-sm text-slate-400">
+                        <div className="space-y-3 text-sm text-slate-600 dark:text-slate-400">
                             <div className="flex items-start gap-2.5">
-                                <FiMapPin className="text-blue-400 size-5 shrink-0 mt-0.5" />
+                                <FiMapPin className="text-blue-500 dark:text-blue-400 size-5 shrink-0 mt-0.5" />
                                 <span className="leading-relaxed">
                                     4th floor, High Mark Chambers, Khajaguda X road, Cyberabad, Hyderabad-500008
                                 </span>
                             </div>
 
                             <div className="flex items-center gap-2.5 pt-1">
-                                <FiPhone className="text-blue-400 size-4 shrink-0" />
-                                <a href="tel:9100694137" className="hover:text-white transition-colors">
+                                <FiPhone className="text-blue-500 dark:text-blue-400 size-4 shrink-0" />
+                                <a href="tel:9100694137" className="hover:text-slate-900 dark:hover:text-white transition-colors">
                                     9100694137
                                 </a>
                             </div>
 
                             <div className="flex items-center gap-2.5">
-                                <FiMail className="text-blue-400 size-4 shrink-0" />
-                                <a href="mailto:Info@amazepms.com" className="hover:text-white transition-colors">
+                                <FiMail className="text-blue-500 dark:text-blue-400 size-4 shrink-0" />
+                                <a href="mailto:Info@amazepms.com" className="hover:text-slate-900 dark:hover:text-white transition-colors">
                                     Info@amazepms.com
                                 </a>
                             </div>
@@ -241,12 +238,12 @@ const Footer = () => {
                 </div>
 
                 {/* BOTTOM COPYRIGHT BAR */}
-                <div className="pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+                <div className="pt-8 border-t border-slate-200 dark:border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
                     <p>© {new Date().getFullYear()} Amaze Property Management Solutions Pvt Ltd. All rights reserved.</p>
                     <div className="flex items-center gap-6">
-                        <a href="#" className="hover:text-slate-300 transition-colors">Privacy Policy</a>
-                        <a href="#" className="hover:text-slate-300 transition-colors">Terms of Service</a>
-                        <a href="#" className="hover:text-slate-300 transition-colors">Sitemap</a>
+                        <Link href="#" className="hover:text-slate-800 dark:hover:text-slate-300 transition-colors">Privacy Policy</Link>
+                        <Link href="#" className="hover:text-slate-800 dark:hover:text-slate-300 transition-colors">Terms of Service</Link>
+                        <Link href="#" className="hover:text-slate-800 dark:hover:text-slate-300 transition-colors">Sitemap</Link>
                     </div>
                 </div>
 

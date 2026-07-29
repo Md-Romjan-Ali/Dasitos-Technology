@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -62,7 +62,7 @@ const Hero = () => {
     };
 
     return (
-        <section className="relative w-full h-screen min-h-[680px] overflow-hidden bg-slate-950 text-white flex items-center">
+        <section className="relative w-full h-screen min-h-[680px] overflow-hidden bg-slate-900 text-white flex items-center">
             {/* Background Image Carousel with Framer Motion Fade */}
             <AnimatePresence mode="wait">
                 <motion.div
@@ -79,10 +79,11 @@ const Hero = () => {
                         src={slides[currentIndex].image}
                         alt={slides[currentIndex].title}
                         className="w-full h-full object-cover object-center"
+                        priority
                     />
-                    {/* Gradients to improve contrast for textual elements */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/60 to-transparent" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-slate-950/30" />
+                    {/* Balanced Overlays for Both Light and Dark Mode */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/50 to-slate-950/20 dark:from-slate-950/95 dark:via-slate-950/70 dark:to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-slate-950/40" />
                 </motion.div>
             </AnimatePresence>
 
@@ -91,19 +92,19 @@ const Hero = () => {
                 <div className="w-[1px] h-12 bg-white/30" />
                 <a
                     href="#"
-                    className="p-2.5 rounded-full bg-white/10 backdrop-blur-md hover:bg-blue-600 transition-all text-white border border-white/10 hover:scale-110"
+                    className="p-2.5 rounded-full bg-slate-900/40 dark:bg-white/10 backdrop-blur-md hover:bg-blue-600 dark:hover:bg-blue-600 transition-all text-white border border-white/20 hover:scale-110 shadow-sm"
                 >
                     <FaFacebookF size={14} />
                 </a>
                 <a
                     href="#"
-                    className="p-2.5 rounded-full bg-white/10 backdrop-blur-md hover:bg-pink-600 transition-all text-white border border-white/10 hover:scale-110"
+                    className="p-2.5 rounded-full bg-slate-900/40 dark:bg-white/10 backdrop-blur-md hover:bg-pink-600 dark:hover:bg-pink-600 transition-all text-white border border-white/20 hover:scale-110 shadow-sm"
                 >
                     <FaInstagram size={14} />
                 </a>
                 <a
                     href="#"
-                    className="p-2.5 rounded-full bg-white/10 backdrop-blur-md hover:bg-blue-500 transition-all text-white border border-white/10 hover:scale-110"
+                    className="p-2.5 rounded-full bg-slate-900/40 dark:bg-white/10 backdrop-blur-md hover:bg-blue-500 dark:hover:bg-blue-500 transition-all text-white border border-white/20 hover:scale-110 shadow-sm"
                 >
                     <FaLinkedinIn size={14} />
                 </a>
@@ -165,7 +166,7 @@ const Hero = () => {
                             initial={{ opacity: 0, x: 40 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.4, duration: 0.8 }}
-                            className="p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 shadow-2xl space-y-5"
+                            className="p-6 rounded-2xl bg-slate-950/40 dark:bg-white/10 backdrop-blur-md border border-white/20 shadow-2xl space-y-5"
                         >
                             <div className="flex items-center gap-4">
                                 <div className="p-3 rounded-xl bg-blue-600/30 border border-blue-400/30 text-blue-400">
@@ -228,14 +229,14 @@ const Hero = () => {
                     <button
                         onClick={handlePrev}
                         aria-label="Previous Slide"
-                        className="p-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white transition-all hover:scale-105 active:scale-95"
+                        className="p-3 rounded-full bg-slate-900/40 dark:bg-white/10 hover:bg-slate-900/60 dark:hover:bg-white/20 backdrop-blur-md border border-white/20 text-white transition-all hover:scale-105 active:scale-95 shadow-sm"
                     >
                         <FiChevronLeft size={20} />
                     </button>
                     <button
                         onClick={handleNext}
                         aria-label="Next Slide"
-                        className="p-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white transition-all hover:scale-105 active:scale-95"
+                        className="p-3 rounded-full bg-slate-900/40 dark:bg-white/10 hover:bg-slate-900/60 dark:hover:bg-white/20 backdrop-blur-md border border-white/20 text-white transition-all hover:scale-105 active:scale-95 shadow-sm"
                     >
                         <FiChevronRight size={20} />
                     </button>

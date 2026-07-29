@@ -112,7 +112,6 @@ const clientsData = [
 ];
 
 const ClientsSection = () => {
-    // Default to the first category initially
     const [activeCategory, setActiveCategory] = useState("Commercial & IT Parks");
     const [searchQuery, setSearchQuery] = useState("");
 
@@ -129,24 +128,24 @@ const ClientsSection = () => {
         : [];
 
     return (
-        <section className="relative mt-10 bg-[#030712] text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <section className="relative mt-10 bg-slate-50 dark:bg-[#030712] text-slate-900 dark:text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-300">
             {/* Background Ambient Accents */}
-            <div className="absolute top-1/4 -left-40 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute bottom-10 -right-40 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute top-1/4 -left-40 w-96 h-96 bg-blue-500/10 dark:bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute bottom-10 -right-40 w-96 h-96 bg-indigo-500/10 dark:bg-indigo-600/10 rounded-full blur-3xl pointer-events-none" />
 
             <div className="max-w-7xl mx-auto relative z-10 space-y-10">
                 {/* HEADER */}
                 <div className="space-y-2 text-center sm:text-left">
-                    <span className="text-blue-400 text-xs sm:text-sm font-semibold tracking-wider uppercase bg-blue-500/10 px-3.5 py-1.5 rounded-full border border-blue-500/20 inline-block">
+                    <span className="text-blue-600 dark:text-blue-400 text-xs sm:text-sm font-semibold tracking-wider uppercase bg-blue-500/10 dark:bg-blue-500/10 px-3.5 py-1.5 rounded-full border border-blue-500/20 inline-block">
                         Our Portfolio
                     </span>
-                    <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
+                    <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white">
                         Our Clients
                     </h2>
                 </div>
 
                 {/* CONTROLS: CATEGORY TABS & SEARCH */}
-                <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 border-b border-slate-800 pb-6">
+                <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 border-b border-slate-200 dark:border-slate-800 pb-6">
                     {/* Category Filter Buttons */}
                     <div className="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none">
                         {categories.map((cat) => (
@@ -154,8 +153,8 @@ const ClientsSection = () => {
                                 key={cat}
                                 onClick={() => setActiveCategory(cat)}
                                 className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-medium whitespace-nowrap transition-all border ${activeCategory === cat
-                                    ? "bg-blue-600 text-white border-blue-500 shadow-lg shadow-blue-500/20"
-                                    : "bg-slate-900/60 text-slate-400 border-slate-800 hover:border-slate-700 hover:text-slate-200"
+                                        ? "bg-blue-600 text-white border-blue-500 shadow-md shadow-blue-500/20 dark:shadow-blue-500/20"
+                                        : "bg-white dark:bg-slate-900/60 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 hover:text-slate-900 dark:hover:text-slate-200"
                                     }`}
                             >
                                 {cat}
@@ -165,13 +164,13 @@ const ClientsSection = () => {
 
                     {/* Search Box */}
                     <div className="relative min-w-[240px]">
-                        <FiSearch className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500 size-4" />
+                        <FiSearch className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500 size-4" />
                         <input
                             type="text"
                             placeholder={`Search in ${activeCategory}...`}
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            className="w-full bg-slate-900/80 border border-slate-800 text-slate-200 placeholder-slate-500 text-sm rounded-xl pl-10 pr-4 py-2 focus:outline-none focus:border-blue-500/60 transition-colors"
+                            className="w-full bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-200 placeholder-slate-400 dark:placeholder-slate-500 text-sm rounded-xl pl-10 pr-4 py-2 focus:outline-none focus:border-blue-500/60 dark:focus:border-blue-500/60 transition-colors shadow-sm dark:shadow-none"
                         />
                     </div>
                 </div>
@@ -186,7 +185,7 @@ const ClientsSection = () => {
                         transition={{ duration: 0.2 }}
                         className="space-y-6"
                     >
-                        <h3 className="text-xl sm:text-2xl font-bold text-blue-400 flex items-center gap-2 border-l-2 border-blue-500 pl-3">
+                        <h3 className="text-xl sm:text-2xl font-bold text-blue-600 dark:text-blue-400 flex items-center gap-2 border-l-2 border-blue-500 pl-3">
                             {activeCategory}
                         </h3>
 
@@ -196,23 +195,24 @@ const ClientsSection = () => {
                                     <motion.div
                                         key={idx}
                                         whileHover={{ scale: 1.005, x: 2 }}
-                                        className="group flex items-center gap-3.5 p-3.5 rounded-xl bg-slate-900/40 border border-slate-800/80 hover:border-blue-500/40 hover:bg-slate-900/70 transition-all cursor-default"
+                                        className="group flex items-center gap-3.5 p-3.5 rounded-xl bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/80 hover:border-blue-500/40 dark:hover:border-blue-500/40 hover:bg-slate-50 dark:hover:bg-slate-900/70 shadow-sm dark:shadow-none transition-all cursor-default"
                                     >
-                                        <FiCheckCircle className="text-blue-400 group-hover:text-blue-300 group-hover:scale-110 transition-transform shrink-0 size-4" />
-                                        <span className="text-slate-300 group-hover:text-white text-sm font-medium transition-colors">
+                                        <FiCheckCircle className="text-blue-600 dark:text-blue-400 group-hover:text-blue-500 dark:group-hover:text-blue-300 group-hover:scale-110 transition-transform shrink-0 size-4" />
+                                        <span className="text-slate-700 dark:text-slate-300 group-hover:text-slate-900 dark:group-hover:text-white text-sm font-medium transition-colors">
                                             {client}
                                         </span>
                                     </motion.div>
                                 ))}
                             </div>
                         ) : (
-                            <div className="py-12 text-center text-slate-500 text-sm">
+                            <div className="py-12 text-center text-slate-400 dark:text-slate-500 text-sm">
                                 No clients found matching {searchQuery} in {activeCategory}.
                             </div>
                         )}
                     </motion.div>
                 </AnimatePresence>
             </div>
+
             <Sponsore />
         </section>
     );
