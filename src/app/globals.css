@@ -1,6 +1,13 @@
 @import "tailwindcss";
 @import "@heroui/styles";
 
+/*
+ * Tell Tailwind v4 to use the .dark CLASS on <html> for dark: variants.
+ * Without this, Tailwind v4 defaults to prefers-color-scheme media query
+ * and ignores the class that next-themes writes to the DOM.
+ */
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   /* Override any color variable */
   --accent: oklch(0.7 0.25 260);

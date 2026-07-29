@@ -77,7 +77,7 @@ const CompanyProfile = () => {
                         <span className="inline-block text-blue-600 dark:text-blue-400 text-xs sm:text-sm font-semibold tracking-wider uppercase bg-blue-500/10 dark:bg-blue-500/20 px-3.5 py-1.5 rounded-full border border-blue-500/20 dark:border-blue-500/30">
                             Who We Are
                         </span>
-                        <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-gray-600  leading-tight">
+                        <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
                             Driven by Purpose, Guided by Excellence
                         </h2>
                         <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg">
